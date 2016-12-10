@@ -1,11 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Nunito:300);
-/* line 4, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 3, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 body {
   background-color: #ffffff;
   font-family: "Trebuchet MS", sans-serif;
   height: 100%; }
 
-/* line 11, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 10, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 header {
   width: 100%;
   background-color: #000000;
@@ -17,24 +16,24 @@ header {
   font-family: "Source Sans Pro";
   letter-spacing: .1em;
   opacity: 0.95; }
-  /* line 22, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 21, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #logo {
     height: 50px;
     margin: 10px 0;
     margin-left: 15px;
     display: inline; }
-  /* line 28, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 27, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #main-nav {
     display: inline; }
-  /* line 31, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 30, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #main-nav-ul {
     float: right;
     margin: 0; }
-  /* line 35, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 34, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .main-nav-li {
     display: inline-block;
     float: left; }
-  /* line 39, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 38, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .nav-item {
     -webkit-transition: 300ms all ease;
     -moz-transition: 300ms all ease;
@@ -46,28 +45,28 @@ header {
     color: #e2bc36;
     font-size: 1.1em;
     display: block; }
-  /* line 51, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 50, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .main-nav-li:hover > .nav-item {
     color: white; }
-  /* line 54, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 53, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #last-main-nav-li {
     margin-right: 20px; }
-  /* line 58, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 57, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .main-nav-li,
   header a {
     display: inline-block;
     color: white; }
-  /* line 62, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 61, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #three-lines-nav-button {
     display: none; }
 
-/* line 67, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 66, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #slideshow {
   -webkit-transition: height 1s;
   -moz-transition: height 1s;
   transition: height 1s; }
 
-/* line 73, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 72, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #slideshow-arrow-wrapper {
   position: absolute;
   -webkit-transition: height 1s, margin 1s;
@@ -75,7 +74,7 @@ header {
   transition: height 1s, margin 1s;
   width: 100%; }
 
-/* line 81, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 80, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 .slideshow-pic {
   -webkit-transition: top 1s, opacity 2000ms;
   transition: top 1s, opacity 2000ms;
@@ -85,7 +84,7 @@ header {
   top: 0;
   left: 0; }
 
-/* line 91, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 90, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #slideshow_forward > img {
   transition: ease 1s;
   position: absolute;
@@ -93,7 +92,7 @@ header {
   right: 0;
   opacity: 0; }
 
-/* line 99, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 98, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #slideshow_backward > img {
   transition: ease 1s;
   position: absolute;
@@ -101,12 +100,12 @@ header {
   left: 0;
   opacity: 0; }
 
-/* line 107, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 106, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #slideshow-arrow-wrapper:hover img {
   position: absolute;
   opacity: 1; }
 
-/* line 112, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 111, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 .body-title {
   text-align: center;
   font-size: 1.5em;
@@ -114,11 +113,11 @@ header {
   font-family: Nunito;
   font-weight: 400;
   color: #e2bc36; }
-  /* line 119, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 118, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   .body-title span {
     display: inline-block;
     position: relative; }
-  /* line 124, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 123, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   .body-title span:before,
   .body-title span:after {
     content: "";
@@ -127,19 +126,19 @@ header {
     border-bottom: .07em solid #000;
     top: 0;
     width: 5em; }
-  /* line 132, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 131, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   .body-title span:before {
     right: 100%;
     margin-right: 15px; }
-  /* line 136, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 135, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   .body-title span:after {
     left: 100%;
     margin-left: 15px; }
 
-/* line 142, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 141, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #team-pics-main-div {
   overflow: hidden; }
-  /* line 144, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 143, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #team-pics-main-div .person-div {
     width: 14%;
     text-align: center;
@@ -147,25 +146,25 @@ header {
     margin-right: 2%;
     padding: 0;
     float: left; }
-    /* line 151, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 150, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #team-pics-main-div .person-div .person-pic {
       max-width: 100%;
       border-radius: 50%;
       background-color: white; }
-    /* line 156, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 155, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #team-pics-main-div .person-div .person-pic-name {
       color: #222;
       font-size: 1.5em;
       font-family: "Source Sans Pro";
       font-weight: 100; }
-  /* line 163, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 162, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #team-pics-main-div #person-div-1 {
     margin-left: 3%; }
-  /* line 166, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 165, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #team-pics-main-div #person-div-6 {
     margin-right: 3%; }
 
-/* line 174, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 173, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 .button-div {
   position: relative;
   width: 200px;
@@ -174,7 +173,7 @@ header {
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   perspective: 1000px; }
-  /* line 180, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 179, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   .button-div a {
     width: 100%;
     height: 100%;
@@ -195,7 +194,7 @@ header {
     -webkit-transition: -webkit-transform 0.25s;
     -moz-transition: -moz-transform 0.25s;
     transition: transform 0.25s; }
-    /* line 191, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 190, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     .button-div a:before,
     .button-div a:after {
       justify-content: center;
@@ -214,7 +213,7 @@ header {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex; }
-    /* line 203, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 202, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     .button-div a:before {
       background-color: #000;
       color: #fff;
@@ -223,7 +222,7 @@ header {
       -ms-transform: rotateY(0deg) translateZ(25px);
       -o-transform: rotateY(0deg) translateZ(25px);
       transform: rotateY(0deg) translateZ(25px); }
-    /* line 208, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 207, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     .button-div a:after {
       background-color: #fff;
       color: #000;
@@ -232,7 +231,7 @@ header {
       -ms-transform: rotateX(-90deg) translateZ(25px);
       -o-transform: rotateX(-90deg) translateZ(25px);
       transform: rotateX(-90deg) translateZ(25px); }
-    /* line 213, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 212, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     .button-div a:hover {
       -webkit-transform: translateZ(25px) rotateX(90deg);
       -moz-transform: translateZ(25px) rotateX(90deg);
@@ -240,7 +239,7 @@ header {
       -o-transform: translateZ(25px) rotateX(90deg);
       transform: translateZ(25px) rotateX(90deg); }
 
-/* line 232, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 231, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #three-lines-nav-button {
   padding: 5.83333px 7px;
   transition: .3s;
@@ -263,10 +262,10 @@ header {
 				}
 			}	
 		}*/ }
-  /* line 256, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 255, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #three-lines-nav-button:active {
     transition: 0; }
-  /* line 259, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 258, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #three-lines-nav-button #three-lines-nav-span {
     display: inline-block;
     z-index: 200;
@@ -282,7 +281,7 @@ header {
     transition: background 0.3s 0.5s ease;
     display: block;
     position: relative; }
-    /* line 265, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 264, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #three-lines-nav-button #three-lines-nav-span:before,
     #three-lines-nav-button #three-lines-nav-span:after {
       display: inline-block;
@@ -304,20 +303,20 @@ header {
       transform-origin: 50% 50%;
       transition: top 0.3s 0.5s ease, -webkit-transform 0.3s ease;
       transition: top 0.3s 0.5s ease, transform 0.3s ease; }
-    /* line 274, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 273, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #three-lines-nav-button #three-lines-nav-span:before {
       top: 8.75px; }
-    /* line 277, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 276, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #three-lines-nav-button #three-lines-nav-span:after {
       top: -8.75px; }
 
-/* line 284, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 283, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 #three-lines-nav-button.open #three-lines-nav-span {
   -webkit-transition: background 0.3s 0s ease;
   -moz-transition: background 0.3s 0s ease;
   transition: background 0.3s 0s ease;
   background: transparent; }
-  /* line 288, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 287, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #three-lines-nav-button.open #three-lines-nav-span:before,
   #three-lines-nav-button.open #three-lines-nav-span:after {
     -webkit-transform: none;
@@ -330,14 +329,14 @@ header {
     transition: top 0.3s ease, transform 0.3s 0.4s ease;
     top: 0;
     width: 35px; }
-  /* line 297, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 296, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #three-lines-nav-button.open #three-lines-nav-span:before {
     -webkit-transform: rotate3d(0, 0, 1, 45deg);
     -moz-transform: rotate3d(0, 0, 1, 45deg);
     -ms-transform: rotate3d(0, 0, 1, 45deg);
     -o-transform: rotate3d(0, 0, 1, 45deg);
     transform: rotate3d(0, 0, 1, 45deg); }
-  /* line 300, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 299, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #three-lines-nav-button.open #three-lines-nav-span:after {
     -webkit-transform: rotate3d(0, 0, 1, -45deg);
     -moz-transform: rotate3d(0, 0, 1, -45deg);
@@ -345,10 +344,10 @@ header {
     -o-transform: rotate3d(0, 0, 1, -45deg);
     transform: rotate3d(0, 0, 1, -45deg); }
 
-/* line 306, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+/* line 305, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
 .body-title-paragraph {
   color: #000;
-  margin: 0 10%;
+  margin: 0 7%;
   text-align: center;
   font-size: 1.1em;
   font-family: Nunito;
@@ -410,16 +409,16 @@ header {
 	width: 100%;
 }*/
 @media screen and (max-width: 1000px) {
-  /* line 379, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 378, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .nav-item {
     font-size: 1.1em;
     padding: 25px 15px; } }
 
 @media screen and (max-width: 850px) {
-  /* line 387, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 386, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #main-nav-ul {
     width: 0; }
-  /* line 390, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 389, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .main-nav-li {
     display: block;
     width: 100%;
@@ -427,30 +426,30 @@ header {
     -webkit-transition: opacity 0.3s 0.5s ease;
     -moz-transition: opacity 0.3s 0.5s ease;
     transition: opacity 0.3s 0.5s ease; }
-  /* line 397, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 396, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #three-lines-nav-button {
     position: absolute;
     top: 0;
     right: 10px;
     display: inline-block;
     opacity: 1; }
-  /* line 404, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 403, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #main-nav-ul.openUL {
     width: 100%;
     background-color: #000;
     opacity: 0.8; }
-  /* line 410, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 409, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #team-pics-main-div {
     font-size: 0.9em; }
-    /* line 411, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 410, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #team-pics-main-div .person-div {
       width: 28%;
       margin-right: 4%; }
-    /* line 416, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 415, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #team-pics-main-div #person-div-1,
     #team-pics-main-div #person-div-4 {
       margin-left: 4%; }
-    /* line 420, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 419, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #team-pics-main-div #person-div-3,
     #team-pics-main-div #person-div-6 {
       margin-right: 4%; } }
@@ -490,17 +489,17 @@ header {
 	}
 }*/
 @media screen and (max-width: 675px) {
-  /* line 464, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 463, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #logo {
     height: 40px;
     margin: 15px 0;
     margin-left: 10px; } }
 
 @media screen and (max-width: 425px) {
-  /* line 472, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 471, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   #team-pics-main-div {
     font-size: 0.7em; }
-    /* line 478, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 477, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     #team-pics-main-div #person-div-1,
     #team-pics-main-div #person-div-2,
     #team-pics-main-div #person-div-3,
@@ -510,14 +509,14 @@ header {
       width: 40%;
       margin-left: 5%;
       margin-right: 5%; }
-  /* line 485, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 484, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   .body-title {
     font-size: 1.2em; }
-    /* line 488, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+    /* line 487, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
     .body-title span:before,
     .body-title span:after {
       width: 2em; }
-  /* line 492, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 491, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #logo {
     height: 35px;
     margin: 17.5px 0;
