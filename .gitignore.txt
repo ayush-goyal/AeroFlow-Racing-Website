@@ -1,0 +1,4 @@
+scss/
+.brackets.json
+doc/
+css/main.css.map
