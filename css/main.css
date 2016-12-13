@@ -13,27 +13,26 @@ header {
   margin: 0;
   position: fixed;
   top: 0;
-  font-family: "Source Sans Pro";
   letter-spacing: .1em;
   opacity: 0.95; }
-  /* line 21, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 20, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #logo {
     height: 50px;
     margin: 10px 0;
     margin-left: 15px;
     display: inline; }
-  /* line 27, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 26, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #main-nav {
     display: inline; }
-  /* line 30, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 29, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header #main-nav-ul {
     float: right;
     margin: 0; }
-  /* line 34, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 33, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .main-nav-li {
     display: inline-block;
     float: left; }
-  /* line 38, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
+  /* line 37, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .nav-item {
     -webkit-transition: 300ms all ease;
     -moz-transition: 300ms all ease;
@@ -44,6 +43,7 @@ header {
     text-decoration: none;
     color: #e2bc36;
     font-size: 1.1em;
+    font-family: Nunito;
     display: block; }
   /* line 50, C:/Users/anil_/Documents/Programming/AeroFlow Racing/scss/main.scss */
   header .main-nav-li:hover > .nav-item {
