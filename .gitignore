@@ -1,4 +1,8 @@
-scss/
+scss/bourbon
 .brackets.json
 doc/
 css/main.css.map
+css/main.css
+css/test
+img/original_team_photos
+sitemap.xml
