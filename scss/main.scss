@@ -215,6 +215,18 @@ $button-transition-speed: 0.25s;
 	}
 }
 
+#donation-div {
+	a {
+		&:before,
+		&:after {
+			border: 5px solid $gold;
+		}
+		&:before {
+			background-color: $gold;
+		}
+	}
+}
+
 $three-lines-nav-color: $gold;
 $three-lines-nav-transition-speed: .3s;
 $three-lines-nav-size: 35px;
