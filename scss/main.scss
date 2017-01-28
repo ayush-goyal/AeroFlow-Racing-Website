@@ -253,17 +253,17 @@ $three-lines-nav-size: 35px;
 	background: none;
 	height: 40px;
 	/*&:hover { //Not needed for mobile version
-			//Expands lines when hovered over but delay is too long FIX
-			opacity: 1;
-			#three-lines-nav-span {
-				&:before {
-					top: $three-lines-nav-size/3.5;
-				}
-				&:after {
-					top: -$three-lines-nav-size/3.5;
-				}
-			}	
-		}*/
+		//Expands lines when hovered over but delay is too long FIX
+		opacity: 1;
+		#three-lines-nav-span {
+			&:before {
+				top: $three-lines-nav-size/3.5;
+			}
+			&:after {
+				top: -$three-lines-nav-size/3.5;
+			}
+		}	
+	}*/
 	&:active {
 		transition: 0;
 	}
@@ -325,65 +325,65 @@ $three-lines-nav-size: 35px;
 
 
 /*.slant-pic-div {
-	position: absolute;
-	width: 25%;
-	height: 300px;
-	background: url(../img/image1.jpg) no-repeat;
-	transform: rotate(-45deg);
+position: absolute;
+width: 25%;
+height: 300px;
+background: url(../img/image1.jpg) no-repeat;
+transform: rotate(-45deg);
 }
 
 .wrap {
-	display: inline-block;
-	@include transform(rotate(45deg) translate3d(0, 0, 0));
-	@include transition(transform 300ms ease-out);
+display: inline-block;
+@include transform(rotate(45deg) translate3d(0, 0, 0));
+@include transition(transform 300ms ease-out);
 }
 
 .crop {
-	position: relative;
+position: relative;
+width: 160px;
+height: 160px;
+margin: 0;
+display: block;
+overflow: hidden;
+@include transform(skew(20deg, 20deg) translate3d(0, 0, 0));
+img {
 	width: 160px;
 	height: 160px;
-	margin: 0;
-	display: block;
-	overflow: hidden;
-	@include transform(skew(20deg, 20deg) translate3d(0, 0, 0));
-	img {
-		width: 160px;
-		height: 160px;
-		position: absolute;
-		left: -50%;
-		margin-top: 36px;
-		margin-left: 36px;
-		top: -50%;
-		@include transform(skew(-20deg, -20deg) rotate(-45deg));
-	}
+	position: absolute;
+	left: -50%;
+	margin-top: 36px;
+	margin-left: 36px;
+	top: -50%;
+	@include transform(skew(-20deg, -20deg) rotate(-45deg));
+}
 }*/
 
 
 /*.slant-pic-div {
-	position: relative;
-	display: inline-block;
-	padding: 1em 20em 10em 10em;
-	overflow: hidden;
-	width: 100px;
-	height: 300px;
+position: relative;
+display: inline-block;
+padding: 1em 20em 10em 10em;
+overflow: hidden;
+width: 100px;
+height: 300px;
 }*/
 
 
 /*.slant-pic-div:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-image: url("../img/image1.jpg");
-	@include transform-origin(100% 0);
-	@include transform(skew(-45deg));
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url("../img/image1.jpg");
+@include transform-origin(100% 0);
+@include transform(skew(-45deg));
 }*/
 
 
 /*.slant-pic-img {
-	width: 100%;
+width: 100%;
 }*/
 
 @media screen and (max-width: 1000px) {
@@ -437,38 +437,38 @@ $three-lines-nav-size: 35px;
 
 
 /*@media screen and (max-width: 700px) {
-	header {
-		height: 60px;
-	}
-	#main-nav > ul {
-		float: none;
-	}
-	.main-nav-li {
-		text-align: center;
-		width: 100%;
-		z-index: 100;
-		position: relative;
-	}
-	.nav-item {
-		margin: 0;
-		padding: 15px;
-		font-size: .8em;
-		height: 15px;
-		line-height: 15px;
-	}
-	#last-nav-item {
-		margin: 0;
-	}
-	.nav-content-item {
-		display: block;
-		font-size: .7em;
-	}
-	.nav-content > ul {
-		position: static;
-	}
-	header #three-lines-nav-button {
-		display: inline-block;
-	}
+header {
+	height: 60px;
+}
+#main-nav > ul {
+	float: none;
+}
+.main-nav-li {
+	text-align: center;
+	width: 100%;
+	z-index: 100;
+	position: relative;
+}
+.nav-item {
+	margin: 0;
+	padding: 15px;
+	font-size: .8em;
+	height: 15px;
+	line-height: 15px;
+}
+#last-nav-item {
+	margin: 0;
+}
+.nav-content-item {
+	display: block;
+	font-size: .7em;
+}
+.nav-content > ul {
+	position: static;
+}
+header #three-lines-nav-button {
+	display: inline-block;
+}
 }*/
 
 @media screen and (max-width: 675px) {
@@ -507,6 +507,18 @@ $three-lines-nav-size: 35px;
 	}
 }
 
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #222222;
+}
+
 #contact-form-right-form {
 	width: 50%;
 	float: right;
@@ -525,9 +537,12 @@ $three-lines-nav-size: 35px;
 			font-weight: 200;
 			a {
 				color: #000000;
+				transition: all 0.3s ease-in-out 0s;
 			}
 		}
-		#contact-form-email:hover {}
+		#contact-form-email:hover > a {
+			color: $gold;
+		}
 	}
 	#contact-form-header {
 		margin-top: 12em;
@@ -582,6 +597,48 @@ $three-lines-nav-size: 35px;
 		position: absolute;
 		transition: all 0.3s ease-in-out 0.2s;
 		top: 36%;
+		right: 12%;
+		width: 15px;
+		opacity: 0;
+	}
+}
+
+#contact-form-return-div {
+	#contact-form-thanks-h1 {
+		width: 50%;
+		float: left;
+		font-family: Nunito;
+		margin-left: 40%;
+		margin-top: 5em;
+		font-size: 1.2em;
+	}
+	#contact-form-thanks-return {
+		padding: 16px 31px;
+		font-family: Nunito;
+		font-weight: 900;
+		font-size: 1em;
+		color: $gold;
+		border: 2px solid #111111;
+		background-color: #ffffff;
+		border-radius: 42px;
+		transition: all 0.3s ease-in-out 0s;
+		position: relative;
+		margin-left: 42%;
+	}
+	#contact-form-thanks-return:hover {
+		color: white;
+		background-color: $gold;
+		cursor: pointer;
+		padding-right: 45px;
+	}
+	#contact-form-thanks-return:hover > img {
+		display: block;
+		opacity: 1;
+	}
+	img {
+		position: absolute;
+		transition: all 0.3s ease-in-out 0.2s;
+		top: 38%;
 		right: 12%;
 		width: 15px;
 		opacity: 0;

@@ -10,7 +10,7 @@
 	<title>AeroFlow Racing</title>
 	<link rel="stylesheet" href="css/boilerplate.css">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.min.css">
+	<link rel="stylesheet" href="css/main.css">
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
@@ -61,24 +61,11 @@
 		</nav>
 	</header>
 
-	<div class="contact-form-float" id="contact-form-left-info">
-		<h1 id="contact-form-header">We want your opinion!</h1>
-		<h1 id="contact-form-below">Send us any questions or comments!</h1>
-		<h1 id="contact-form-email">Fill out the form to the right or send us an email at <span id="contact-form-email"><a href="mailto:contact@aeroflowracing.com">contact@aeroflowracing.com</a></span></h1>
-	</div>
-
-	<div class="contact-form-float" id="contact-form-right-form">
-		<form id="contact-form" method="POST" action="https://formspree.io/contact@aeroflowracing.com">
-			<input name="name" id="contact-form-name" placeholder="Name" required>
-			<input name="_replyto" id="contact-form-email" placeholder="Email" required>
-			<input name="subject" id="contact-form-subject" placeholder="Subject" required>
-			<textarea name="message" id="contact-form-message" placeholder="Message" rows="5" required></textarea>
-			<input type="hidden" name="_next" value="/thanks.html">
-			<button type="submit">
-				<span>SUBMIT</span>
-				<img src="img/arrow.svg">
-			</button>
-		</form>
+	<div id="contact-form-return-div">
+		<h1 id="contact-form-thanks-h1">Thank you for your submission!</h1>
+		<button id="contact-form-thanks-return" href="/">Return to main site
+			<img src="img/arrow.svg">
+		</button>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
