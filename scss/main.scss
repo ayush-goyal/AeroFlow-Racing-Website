@@ -267,6 +267,9 @@
 		&:active {
 			transition: 0;
 		}
+		&:focus {
+			outline: none;
+		}
 		#three-lines-nav-span {
 			@include line;
 			@include transition(background .3s .5s ease);
