@@ -1,0 +1,108 @@
+@import "bourbon/bourbon";
+@media screen and (max-width: 1000px) {
+	header .nav-item {
+		font-size: 1.1em;
+		padding: 25px 15px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	header {
+		#main-nav-ul {
+			width: 0;
+		}
+		.main-nav-li {
+			display: block;
+			width: 100%;
+			text-align: center;
+			@include transition-delay;
+			@include transition(opacity .3s .5s ease);
+		}
+		#three-lines-nav-button {
+			position: absolute;
+			top: 0;
+			right: 10px;
+			display: inline-block;
+			opacity: 1;
+		}
+		#main-nav-ul.openUL {
+			width: 100%;
+			background-color: #000;
+			opacity: 0.8;
+		}
+	}
+	#team-pics-main-div {
+		.person-div {
+			width: 28%;
+			margin-right: 4%;
+		}
+		#person-div-1 {
+			margin-left: 4%;
+		}
+		#person-div-3 {
+			margin-right: 4%;
+		}
+		#person-div-4 {
+			margin-left: 20%;
+		}
+		#person-div-5 {
+			margin-right: 20%;
+		}
+	}
+	font-size: 0.9em;
+	body > #the-team-main-content-wrapper {
+		#the-team-person-div-1,
+		#the-team-person-div-3 {
+			margin: 0 10% 0 0;
+			width: 37% !important;
+		}
+		#the-team-person-div-2,
+		#the-team-person-div-4 {
+			margin: 0 10% 0 6%;
+			width: 37%;
+		}
+		#the-team-person-div-5 {
+			margin: 0 31.5%;
+			width: 37% !important;
+		}
+	}
+}
+
+@media screen and (max-width: 675px) {
+	header #logo {
+		height: 40px;
+		margin: 15px 0;
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	#team-pics-main-div {
+		#person-div-1,
+		#person-div-2,
+		#person-div-3,
+		#person-div-4 {
+			width: 40%;
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+		#person-div-5 {
+			width: 40%;
+			margin-left: 30%;
+			margin-right: 30%;
+		}
+		font-size: 0.7em;
+	}
+	.body-title {
+		font-size: 1.2em;
+		span:before,
+		span:after {
+			width: 2em;
+		}
+	}
+	header #logo {
+		height: 35px;
+		margin: 17.5px 0;
+		margin-left: 10px;
+	}
+}
