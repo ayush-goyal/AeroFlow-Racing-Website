@@ -1,9 +1,8 @@
-scss/bourbon
+src/scss/bourbon
 .brackets.json
-doc/
 *.css.map
-css/main.css
-css/test
-img/original_team_photos
-img/favicon/other
+dist/css/test
+src/img/original_team_photos
+src/img/favicon/other
 sitemap.xml
+node_modules/

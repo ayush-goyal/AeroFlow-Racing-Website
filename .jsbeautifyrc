@@ -1,0 +1,5 @@
+{
+	"space_around_combinator": true,
+	"indent_with_tabs": true,
+	"newline_between_rules": true
+}

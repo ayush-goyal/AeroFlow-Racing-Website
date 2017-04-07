@@ -1,0 +1,21 @@
+{
+  "name": "aeroflowracing",
+  "version": "1.0.0",
+  "description": "F1 in Schools Team Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayush-goyal/AeroFlow-Racing-Website.git"
+  },
+  "author": "Ayush Goyal",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^3.18.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
