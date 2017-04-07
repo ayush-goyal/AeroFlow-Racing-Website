@@ -1,0 +1,64 @@
+#the-team-main-content-wrapper {
+	margin-top: 70px;
+	.the-team-person-div {
+		width: 25%;
+		text-align: center;
+		display: inline-block;
+		margin-left: 6%;
+		padding: 0;
+		float: left;
+		margin-top: 3em;
+		.person-team-pic {
+			width: 75%;
+			border-radius: 50%;
+			background-color: white;
+		}
+		.the-team-person-name {
+			font-size: 1.5em;
+			font-family: Nunito;
+			font-weight: 500;
+			text-transform: uppercase;
+			margin-top: 2em;
+			margin-bottom: 0;
+		}
+		.the-team-person-role {
+			font-size: 1em;
+			font-family: Nunito;
+			font-weight: 500;
+			color: #686868;
+			margin-top: 0;
+		}
+		.the-team-person-role:after {
+			content: '';
+			display: block;
+			width: 5em;
+			height: 0.4em;
+			border-radius: 2px;
+			background-color: $gold;
+			margin: 1em auto 0 auto;
+		}
+		.the-team-person-info {
+			margin-top: 2em;
+			font-size: 1em;
+			font-family: Nunito;
+		}
+	}
+	#the-team-person-div-1,
+	#the-team-person-div-2,
+	#the-team-person-div-3 {
+		height: 800px;
+	}
+	#the-team-person-div-1 {
+		margin-left: 6.5%;
+	}
+	#the-team-person-div-3 {
+		margin-right: 6.5%;
+	}
+	#the-team-person-div-4 {
+		margin-left: 18%;
+	}
+	#the-team-person-div-5 {
+		margin-right: 18%;
+		margin-left: 14%;
+	}
+}

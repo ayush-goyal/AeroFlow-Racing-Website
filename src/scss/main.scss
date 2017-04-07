@@ -1,0 +1,574 @@
+@import "bourbon/bourbon";
+$gold: #e2bc36;
+body {
+	//testi
+	background-color: #fff;
+	font-family: "Trebuchet MS", sans-serif;
+	height: 100%;
+}
+
+header {
+	width: 100%;
+	background-color: #000;
+	z-index: 100;
+	height: 70px;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	letter-spacing: 0.1em;
+	opacity: 0.95;
+	#logo {
+		height: 50px;
+		margin: 10px 0;
+		margin-left: 10px;
+		display: inline;
+	}
+	#main-nav {
+		display: inline;
+	}
+	#main-nav-ul {
+		float: right;
+		margin: 0;
+	}
+	.main-nav-li {
+		display: inline-block;
+		float: left;
+		.nav-item {
+			-webkit-transition: 300ms all ease;
+			-moz-transition: 300ms all ease;
+			transition: 300ms all ease;
+			height: 20px;
+			line-height: 20px;
+			padding: 25px 10px;
+			text-decoration: none;
+			color: $gold;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			font-family: Montserrat;
+			font-weight: 300;
+			display: block;
+			span {
+				border-bottom: 1px solid $gold;
+				padding-bottom: 5px;
+				animation-duration: 3s;
+			}
+		}
+	}
+	.main-nav-li:hover > .nav-item {
+		color: white;
+		span {
+			border-color: white;
+		}
+	}
+	#last-main-nav-li {
+		margin-right: 20px;
+	}
+	.main-nav-li,
+	a {
+		display: inline-block;
+		color: white;
+	}
+	#three-lines-nav-button {
+		display: none;
+	}
+}
+
+#slideshow {
+	-webkit-transition: height 1s;
+	-moz-transition: height 1s;
+	transition: height 1s;
+}
+
+#slideshow-arrow-wrapper {
+	position: absolute;
+	-webkit-transition: height 1s, margin 1s;
+	-moz-transition: height 1s, margin 1s;
+	transition: height 1s, margin 1s;
+	width: 100%;
+}
+
+.slideshow-pic {
+	-webkit-transition: top 1s, opacity 2000ms;
+	transition: top 1s, opacity 2000ms;
+	width: 100%;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#slideshow_forward > img {
+	transition: ease 1s;
+	position: absolute;
+	top: 45%;
+	right: 0;
+	opacity: 0;
+}
+
+#slideshow_backward > img {
+	transition: ease 1s;
+	position: absolute;
+	top: 45%;
+	left: 0;
+	opacity: 0;
+}
+
+#slideshow-arrow-wrapper:hover img {
+	position: absolute;
+	opacity: 1;
+}
+
+.body-title {
+	text-align: center;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-family: Nunito;
+	font-weight: 400;
+	color: $gold;
+	span {
+		display: inline-block;
+		position: relative;
+	}
+	span::before,
+	span::after {
+		content: "";
+		position: absolute;
+		height: 50%;
+		border-bottom: 0.07em solid #000;
+		top: 0;
+		width: 5em;
+	}
+	span::before {
+		right: 100%;
+		margin-right: 15px;
+	}
+	span::after {
+		left: 100%;
+		margin-left: 15px;
+	}
+}
+
+#team-pics-main-div {
+	overflow: hidden;
+	.person-div {
+		width: 17%;
+		text-align: center;
+		display: inline-block;
+		margin-right: 2%;
+		padding: 0;
+		float: left;
+		.person-pic {
+			max-width: 100%;
+			border-radius: 50%;
+			background-color: white;
+		}
+		.person-pic-name {
+			color: #222;
+			font-size: 1.5em;
+			font-family: "Source Sans Pro";
+			font-weight: 100;
+		}
+	}
+	#person-div-1 {
+		margin-left: 3.5%;
+	}
+	#person-div-6 {
+		margin-right: 3.5%;
+	}
+}
+
+$button-height: 50px;
+$button-width: 200px;
+$button-transition-speed: 0.25s;
+.button-div {
+	position: relative;
+	width: $button-width;
+	height: $button-height;
+	margin: 2em auto;
+	@include perspective(1000px);
+	a {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		font-family: Nunito;
+		text-transform: uppercase;
+		color: white;
+		@include transform-style(preserve-3d);
+		@include transform(translateZ(-$button-height/2));
+		@include transition(transform $button-transition-speed);
+		&::before,
+		&::after {
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			width: $button-width;
+			height: $button-height;
+			position: absolute;
+			border: 5px solid #000;
+			box-sizing: border-box;
+			content: attr(title);
+			@include display(flex);
+		}
+		&::before {
+			background-color: #000;
+			color: #fff;
+			@include transform(rotateY(0deg) translateZ($button-height/2));
+		}
+		&::after {
+			background-color: #fff;
+			color: #000;
+			@include transform(rotateX(-90deg) translateZ($button-height/2));
+		}
+		&:hover {
+			@include transform(translateZ($button-height/2) rotateX(90deg));
+		}
+	}
+}
+
+#donation-div {
+	a {
+		&::before,
+		&::after {
+			border: 5px solid $gold;
+		}
+		&::before {
+			background-color: $gold;
+		}
+	}
+}
+
+$three-lines-nav-color: $gold;
+$three-lines-nav-transition-speed: 0.3s;
+$three-lines-nav-size: 35px;
+@mixin line {
+	display: inline-block;
+	z-index: 200;
+	width: $three-lines-nav-size;
+	height: $three-lines-nav-size/9;
+	background: $three-lines-nav-color;
+	border-radius: $three-lines-nav-size/14;
+	@include transition($three-lines-nav-transition-speed);
+}
+
+#three-lines-nav-button {
+	/*
+	&:hover { //Not needed for mobile version
+	//Expands lines when hovered over but delay is too long FIX
+		opacity: 1;
+	}
+	#three-lines-nav-span {
+		&:before {
+			top: $three-lines-nav-size/3.5;
+		}
+		&:after {
+			top: -$three-lines-nav-size/3.5;
+		}
+	}
+	*/
+	//REMEMBER TO FIX FOR MIXINS BELOW TWO PLACES
+	//Also three lines are not centered in heading
+	padding: $three-lines-nav-size/6 $three-lines-nav-size/5;
+	transition: 0.3s;
+	cursor: pointer;
+	border-radius: $three-lines-nav-size/7;
+	display: inline-block;
+	margin: 15px 0;
+	border: none;
+	background: none;
+	height: 40px;
+	&:active {
+		transition: 0;
+	}
+	&:focus {
+		outline: none;
+	}
+	#three-lines-nav-span {
+		@include line;
+		@include transition(background 0.3s 0.5s ease);
+		display: block;
+		position: relative;
+		&::before,
+		&::after {
+			@include line;
+			position: absolute;
+			left: 0;
+			content: '';
+			@include transform-origin(50% 50%);
+			transition: top 0.3s 0.5s ease, -webkit-transform 0.3s ease; //FIX FOR TRANSITIONS HERE USING MIXINS
+			transition: top 0.3s 0.5s ease, transform 0.3s ease;
+		}
+		&::before {
+			top: $three-lines-nav-size/4;
+		}
+		&::after {
+			top: -$three-lines-nav-size/4;
+		}
+	}
+}
+
+#three-lines-nav-button.open {
+	#three-lines-nav-span {
+		background: transparent;
+		@include transition(background 0.3s 0s ease);
+		&::before,
+		&::after {
+			@include transform(none);
+			width: $three-lines-nav-size;
+			transition: top 0.3s ease, -webkit-transform 0.3s 0.4s ease; //FIX FOR TRANSITIONS HERE USING MIXINS
+			transition: top 0.3s ease, transform 0.3s 0.4s ease; //Formation of X is delayed till - is formed 
+			top: 0;
+		}
+		&::before {
+			@include transform(rotate3d(0, 0, 1, 45deg));
+		}
+		&::after {
+			@include transform(rotate3d(0, 0, 1, -45deg));
+		}
+	}
+}
+
+.body-title-paragraph {
+	color: #000;
+	margin: 0 7%;
+	text-align: center;
+	font-size: 1.1em;
+	font-family: Nunito;
+	line-height: 1.7em;
+	#f1-in-schools-link {
+		cursor: pointer;
+		font-weight: 200;
+		a {
+			color: #000;
+			transition: all 0.3s ease-in-out 0s;
+		}
+	}
+	#f1-in-schools-link:hover > a {
+		color: $gold;
+	}
+}
+
+
+/*
+.slant-pic-div {
+position: absolute;
+width: 25%;
+height: 300px;
+background: url(../img/image1.jpg) no-repeat;
+transform: rotate(-45deg);
+}
+
+.wrap {
+display: inline-block;
+@include transform(rotate(45deg) translate3d(0, 0, 0));
+@include transition(transform 300ms ease-out);
+}
+
+.crop {
+position: relative;
+width: 160px;
+height: 160px;
+margin: 0;
+display: block;
+overflow: hidden;
+@include transform(skew(20deg, 20deg) translate3d(0, 0, 0));
+img {
+width: 160px;
+height: 160px;
+position: absolute;
+left: -50%;
+margin-top: 36px;
+margin-left: 36px;
+top: -50%;
+@include transform(skew(-20deg, -20deg) rotate(-45deg));
+}
+}
+*/
+
+
+/*
+.slant-pic-div {
+position: relative;
+display: inline-block;
+padding: 1em 20em 10em 10em;
+overflow: hidden;
+width: 100px;
+height: 300px;
+}
+*/
+
+
+/*
+.slant-pic-div:after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url("../img/image1.jpg");
+@include transform-origin(100% 0);
+@include transform(skew(-45deg));
+}
+*/
+
+
+/*
+.slant-pic-img {
+width: 100%;
+}
+*/
+
+
+/*
+@media screen and (max-width: 700px) {
+header {
+height: 60px;
+}
+#main-nav > ul {
+float: none;
+}
+.main-nav-li {
+text-align: center;
+width: 100%;
+z-index: 100;
+position: relative;
+}
+.nav-item {
+margin: 0;
+padding: 15px;
+font-size: .8em;
+height: 15px;
+line-height: 15px;
+}
+#last-nav-item {
+margin: 0;
+}
+.nav-content-item {
+display: block;
+font-size: .7em;
+}
+.nav-content > ul {
+position: static;
+}
+header #three-lines-nav-button {
+display: inline-block;
+}
+}
+*/
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #222;
+}
+
+#sponsors-page-main-wrapper {
+	margin-top: 80px;
+	#sponsor-paragraph {
+		margin-bottom: 4em;
+	}
+}
+
+#main-404-content-wrapper {
+	margin-top: 100px;
+	#page-404-info {
+		text-align: center;
+		font-family: Nunito;
+		font-size: 1.6em;
+	}
+}
+
+#section-about {
+	margin-bottom: 100px;
+	#section-about-team {
+		overflow: auto;
+		margin-top: 30px;
+		#column-left {
+			width: 45%;
+			float: left;
+			margin-right: 5%;
+			margin-left: 5%;
+			#section-about-text {
+				margin-top: 10%;
+			}
+			h1 {
+				font-family: Montserrat;
+				text-transform: uppercase;
+				font-size: 1.5em;
+				line-height: 1.2;
+			}
+			hr {
+				width: 10%;
+				color: #242424;
+				border: 1.5px solid #242424;
+				letter-spacing: 0.08em;
+			}
+			p {
+				margin-top: 40px;
+				font-family: Nunito;
+				font-size: 1.1em;
+				color: #797979;
+				line-height: 1.7;
+			}
+		}
+		#column-right {
+			width: 43%;
+			float: right;
+			margin-right: 2%;
+			#section-about-img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+#section-about-stats {
+	margin-top: 75px;
+	overflow: auto;
+	width: 100%;
+	.stats {
+		float: left;
+		width: 33.3%;
+		.section-about-stats-circle {
+			display: table;
+			background-color: #f6f6f6;
+			border-radius: 50%;
+			width: 300px;
+			height: 300px;
+			text-align: center;
+			margin: 0 auto;
+			box-shadow: 2px 2px 5px 0 rgba(30, 30, 30, 0.2);
+			div {
+				display: table-cell;
+				vertical-align: middle;
+				h1 {
+					font-family: Montserrat;
+					color: #121212;
+					font-size: 2em;
+					line-height: 1;
+				}
+				h2 {
+					font-family: Nunito;
+					color: $gold;
+					font-size: 1em;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+
+
+/* Import other scss files for other pages */
+
+@import "the-team.scss",
+"thanks.scss",
+"contact.scss",
+"media.scss",
+"footer.scss";
