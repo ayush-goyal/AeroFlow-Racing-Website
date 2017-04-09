@@ -7,6 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var changed = require('gulp-changed');
 var htmlmin = require('gulp-htmlmin');
+var ghpages = require('gulp-gh-pages');
 
 gulp.task('sass', function() {
 	return gulp.src('src/scss/main.scss')
@@ -45,7 +46,7 @@ gulp.task('img', function() {
 })
 
 gulp.task('extras', function() {
-	return gulp.src('src/favicon.ico')
+	return gulp.src(['src/favicon.ico', 'CNAME'])
 		.pipe(gulp.dest('dist/'))
 })
 
