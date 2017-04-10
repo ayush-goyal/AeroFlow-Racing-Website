@@ -9,11 +9,18 @@ var changed = require('gulp-changed');
 var htmlmin = require('gulp-htmlmin');
 var ghpages = require('gulp-gh-pages');
 
+
+function onError(error) {
+	console.log("Error");
+	this.emit('end');
+}
+
 gulp.task('sass', function() {
 	return gulp.src('src/scss/main.scss')
 		.pipe(changed('dist/css/'))
 		.pipe(sourcemaps.init())
 		.pipe(sass())
+		.on('error', onError)
 		.pipe(autoprefixer())
 		.pipe(cleanCSS())
 		.pipe(sourcemaps.write('./maps'))
@@ -24,6 +31,7 @@ gulp.task('js', function() {
 	return gulp.src('src/js/**/*.js')
 		.pipe(changed('dist/js/'))
 		.pipe(uglify())
+		.on('error', onError)
 		.pipe(gulp.dest('dist/js/'))
 })
 
@@ -33,6 +41,7 @@ gulp.task('html', function() {
 		.pipe(htmlmin({
 			collapseWhitespace: true
 		}))
+		.on('error', onError)
 		.pipe(gulp.dest('dist/'));
 });
 

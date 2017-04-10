@@ -18,8 +18,8 @@ header {
 	letter-spacing: 0.1em;
 	opacity: 0.95;
 	#logo {
-		height: 50px;
 		margin: 10px 0;
+		height: 50px;
 		margin-left: 10px;
 		display: inline;
 	}
@@ -32,10 +32,7 @@ header {
 	}
 	.main-nav-li {
 		display: inline-block;
-		float: left;
 		.nav-item {
-			-webkit-transition: 300ms all ease;
-			-moz-transition: 300ms all ease;
 			transition: 300ms all ease;
 			height: 20px;
 			line-height: 20px;
@@ -47,16 +44,15 @@ header {
 			font-family: Montserrat;
 			font-weight: 300;
 			display: block;
-			span {
+			span#currentPageNav {
 				border-bottom: 1px solid $gold;
 				padding-bottom: 5px;
-				animation-duration: 3s;
 			}
 		}
 	}
 	.main-nav-li:hover > .nav-item {
 		color: white;
-		span {
+		span#currentPageNav {
 			border-color: white;
 		}
 	}
@@ -500,6 +496,7 @@ display: inline-block;
 			h1 {
 				font-family: Montserrat;
 				text-transform: uppercase;
+				font-weight: 800;
 				font-size: 1.5em;
 				line-height: 1.2;
 			}
@@ -521,6 +518,7 @@ display: inline-block;
 			width: 43%;
 			float: right;
 			margin-right: 2%;
+			overflow: hidden;
 			#section-about-img {
 				width: 100%;
 			}
@@ -537,13 +535,13 @@ display: inline-block;
 		width: 33.3%;
 		.section-about-stats-circle {
 			display: table;
-			background-color: #f6f6f6;
+			background-color: #fefefe;
 			border-radius: 50%;
 			width: 300px;
 			height: 300px;
 			text-align: center;
 			margin: 0 auto;
-			box-shadow: 2px 2px 5px 0 rgba(30, 30, 30, 0.2);
+			box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.15);
 			div {
 				display: table-cell;
 				vertical-align: middle;
@@ -552,11 +550,12 @@ display: inline-block;
 					color: #121212;
 					font-size: 2em;
 					line-height: 1;
+					font-weight: 500;
 				}
 				h2 {
 					font-family: Nunito;
 					color: $gold;
-					font-size: 1em;
+					font-size: 1.4em;
 					text-transform: uppercase;
 				}
 			}
