@@ -135,8 +135,8 @@ function currentDiv(n) {
 
 function showDivs(n) {
 	var i;
-	var x = document.getElementsByClassName("mySlides");
-	var dots = document.getElementsByClassName("demo");
+	var x = document.getElementsByClassName("gallery-img");
+	var dots = document.getElementsByClassName("gallery-change-dots");
 	if (n > x.length) {
 		slideIndex = 1
 	}
@@ -147,8 +147,8 @@ function showDivs(n) {
 		x[i].style.display = "none";
 	}
 	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(" w3-white", "");
+		dots[i].className = dots[i].className.replace(" gallery-change-dots-active", "");
 	}
 	x[slideIndex - 1].style.display = "block";
-	dots[slideIndex - 1].className += " w3-white";
+	dots[slideIndex - 1].className += " gallery-change-dots-active";
 }
