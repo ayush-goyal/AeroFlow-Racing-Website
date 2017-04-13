@@ -56,7 +56,7 @@ var slideshow_height = function() {
 };
 slideshow_height();
 $(window).resize(slideshow_height);
-var slideshow_pics = ["1", "2"];
+var slideshow_pics = ["1", "2", "3", "4"];
 var pic_number = 0;
 var timeout = 0;
 $('.main-nav-li').hover(function() {
