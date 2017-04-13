@@ -464,22 +464,6 @@ display: inline-block;
 	background-color: #222;
 }
 
-#sponsors-page-main-wrapper {
-	margin-top: 80px;
-	#sponsor-paragraph {
-		margin-bottom: 4em;
-	}
-}
-
-#main-404-content-wrapper {
-	margin-top: 100px;
-	#page-404-info {
-		text-align: center;
-		font-family: Nunito;
-		font-size: 1.6em;
-	}
-}
-
 #section-about {
 	margin-bottom: 100px;
 	#section-about-team {
@@ -571,4 +555,7 @@ display: inline-block;
 "contact.scss",
 "media.scss",
 "footer.scss",
-"gallery.scss";
+"gallery.scss",
+"sponsors.scss",
+"donate.scss",
+"404.scss";
