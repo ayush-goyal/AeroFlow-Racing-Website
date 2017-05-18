@@ -152,3 +152,16 @@ function showDivs(n) {
 	x[slideIndex - 1].style.display = "block";
 	dots[slideIndex - 1].className += " gallery-change-dots-active";
 }
+
+
+//Sponsors buttons
+var elements = document.getElementsByClassName("sponsor-logos-button");
+for (var i = 0; i < elements.length; i++) {
+	elements[i].style.height = elements[i].offsetWidth * 2.5;
+}
+window.addEventListener("resize", function(e) {
+	var elements = document.getElementsByClassName("sponsor-logos-button");
+	for (var i = 0; i < elements.length; i++) {
+		elements[i].style.height = elements[i].offsetWidth * 2.5;
+	}
+});

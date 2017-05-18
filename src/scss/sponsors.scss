@@ -21,12 +21,12 @@
 			}
 			.sponsor-logos {
 				clear: both;
-				overflow: auto;
+				overflow: hidden;
 				margin-bottom: 6em;
 				.sponsor-logos-img-div {
 					width: 50%;
 					float: left;
-					margin-top: 6em;
+					margin-top: 2em;
 					#novelis-logo {
 						width: 80%;
 						margin: 0 10%;
@@ -40,16 +40,77 @@
 						margin: 0 35%;
 					}
 					#abec357-logo {
-						width: 36%;
-						margin: 0 32%;
+						width: 44%;
+						margin: 0 28%;
 					}
 					#chick-fil-a-logo {
-						width: 40%;
-						margin: 0 30%;
+						width: 42%;
+						margin: 0 29%;
 					}
 					#enoch-logo {
-						width: 76%;
-						margin: 0 12%;
+						width: 84%;
+						margin: 0 8%;
+					}
+					.sponsor-logos-button {
+						text-decoration: none;
+						font-family: "Nunito", sans-serif;
+						font-size: 1em;
+						text-transform: uppercase;
+						letter-spacing: 2px;
+						text-align: center;
+						font-weight: 300;
+						margin: 2em auto;
+						padding: 15px 0;
+						width: 40%;
+						background: $gold;
+						border: 1px solid $gold;
+						color: #333;
+						overflow: hidden;
+						transition: all 0.5s;
+						display: block;
+						max-width: 200px;
+						min-width: 110px;
+						span {
+							display: inline-block;
+							position: relative;
+							padding-right: 0;
+							transition: padding-right 0.5s;
+						}
+						span::after {
+							content: ' ';
+							position: absolute;
+							top: 0;
+							right: -18px;
+							opacity: 0;
+							width: 10px;
+							height: 10px;
+							margin-top: -10px;
+							background: rgba(0, 0, 0, 0);
+							border: 3px solid #fff;
+							border-top: none;
+							border-right: none;
+							transition: opacity 0.5s, top 0.5s, right 0.5s;
+							transform: rotate(-45deg);
+						}
+					}
+					.sponsor-logos-button:hover,
+					.sponsor-logos-button:active {
+						text-decoration: none;
+						color: $gold;
+						border-color: $gold;
+						background: #fff;
+					}
+					.sponsor-logos-button:hover span,
+					.sponsor-logos-button:active span {
+						padding-right: 30px;
+					}
+					.sponsor-logos-button:hover span::after,
+					.sponsor-logos-button:active span::after {
+						transition: opacity 0.5s, top 0.5s, right 0.5s;
+						opacity: 1;
+						border-color: $gold;
+						right: 0;
+						top: 50%;
 					}
 				}
 				.sponsor-logos-info-div {
@@ -60,9 +121,38 @@
 						margin: 1em 0 0;
 						font-family: Nunito;
 						color: #666;
+						font-size: 1.2em;
 					}
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.sponsor-logos {
+		margin-bottom: 3em !important;
+		.sponsor-logos-img-div {
+			margin-top: 3em !important;
+			width: 100% !important;
+			.sponsor-logos-button {
+				font-size: 0.8em !important;
+				width: 35%;
+				margin: 1.5em auto !important;
+				padding: 10px 0 !important;
+			}
+		}
+		.sponsor-logos-info-div {
+			width: 100% !important;
+			margin: 0 !important;
+			p {
+				text-align: center !important;
+			}
+		}
+	}
+	@media screen and (max-width: 650px) {
+		.sponsor-logos-info-div {
+			font-size: 1em !important;
 		}
 	}
 }
