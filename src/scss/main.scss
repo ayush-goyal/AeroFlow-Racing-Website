@@ -5,6 +5,7 @@ body {
 	background-color: #fff;
 	font-family: "Trebuchet MS", sans-serif;
 	height: 100%;
+	margin: 0;
 }
 
 header {
@@ -517,6 +518,7 @@ display: inline-block;
 	.stats {
 		float: left;
 		width: 33.3%;
+		padding: 0;
 		.section-about-stats-circle {
 			display: table;
 			background-color: #fefefe;
