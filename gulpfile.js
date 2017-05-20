@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var del = require('del');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
@@ -14,6 +15,12 @@ function onError(error) {
 	console.log("Error");
 	this.emit('end');
 }
+
+gulp.task('clean', function() {
+	return del([
+		'dist/**/*'
+	]);
+});
 
 gulp.task('sass', function() {
 	return gulp.src('src/scss/main.scss')
@@ -33,6 +40,11 @@ gulp.task('js', function() {
 		.pipe(uglify())
 		.on('error', onError)
 		.pipe(gulp.dest('dist/js/'))
+})
+
+gulp.task('css', function() {
+	return gulp.src('src/css/*')
+		.pipe(gulp.dest('dist/css/'))
 })
 
 gulp.task('html', function() {
@@ -66,6 +78,6 @@ gulp.task('watch', function() {
 	gulp.watch('src/*.html', ['html']);
 });
 
-gulp.task('default', ['sass', 'html', 'img', 'js', 'extras'], function() {
+gulp.task('default', ['sass', 'html', 'img', 'js', 'css', 'extras'], function() {
 	console.log('Building dist folder...');
 });
