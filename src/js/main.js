@@ -51,8 +51,14 @@ var slideshow_height = function() {
 		document.getElementById("slideshow-arrow-wrapper").style.marginTop = '0';
 		$('.slideshow-pic').css('top', '0');
 	}*/
-	document.getElementById("slideshow").style.marginTop = '70px';
-	$('.slideshow-pic').css('top', '70px');
+	if (w > 1100) {
+		document.getElementById("slideshow").style.marginTop = '70px';
+		$('.slideshow-pic').css('top', '70px');
+	} else {
+		document.getElementById("slideshow").style.marginTop = '60px';
+		$('.slideshow-pic').css('top', '60px');
+	}
+
 };
 slideshow_height();
 $(window).resize(slideshow_height);
@@ -165,3 +171,51 @@ window.addEventListener("resize", function(e) {
 		elements[i].style.height = elements[i].offsetWidth * 2.5;
 	}
 });
+
+//Main Page Nav
+function change_nav() {
+	about_offset = $('#hero').offset().top + ((2 / 3) * $('#hero').height());
+	challenge_offset = $('#team-pics-main-div').offset().top + ((2 / 3) * $('#team-pics-main-div').height());
+	gallery_offset = $('#sponsor-paragraph').offset().top;
+	scroll_start = $(this).scrollTop();
+	if (scroll_start > gallery_offset) {
+		$('#main-page-nav-gallery').html('<span id="currentPageNav">Gallery</span>');
+		$('#main-page-nav-home').html('Home');
+		$('#main-page-nav-about').html('About');
+		$('#main-page-nav-challenge').html('The Challenge');
+	} else if (scroll_start > challenge_offset) {
+		$('#main-page-nav-challenge').html('<span id="currentPageNav">The Challenge</span>');
+		$('#main-page-nav-home').html('Home');
+		$('#main-page-nav-about').html('About');
+		$('#main-page-nav-gallery').html('Gallery');
+	} else if (scroll_start > about_offset) {
+		$('#main-page-nav-about').html('<span id="currentPageNav">About</span>');
+		$('#main-page-nav-home').html('Home');
+		$('#main-page-nav-challenge').html('The Challenge');
+		$('#main-page-nav-gallery').html('Gallery');
+	} else {
+		$('#main-page-nav-home').html('<span id="currentPageNav">Home</span></span>');
+		$('#main-page-nav-about').html('About');
+		$('#main-page-nav-challenge').html('The Challenge');
+		$('#main-page-nav-gallery').html('Gallery');
+	}
+}
+
+function changeNavLinksHeight() {
+	if (screen.width < 950) {
+		var navLinks = document.getElementsByClassName('nav-item');
+		var navLinksHeight = (screen.height - (60 + (8 * 20))) / 16
+		//60 for height of navbar and 20 because each link is 20 pixels tall
+		for (var i = 0; i < navLinks.length; i++) {
+
+			navLinks[i].style.padding = navLinksHeight + "px";
+			console.log('helldo');
+		}
+	}
+}
+$(document).ready(function() {
+	changeNavLinksHeight();
+	$(window).resize(function() {
+		changeNavLinksHeight();
+	})
+})

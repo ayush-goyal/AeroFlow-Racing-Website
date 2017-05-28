@@ -12,7 +12,7 @@ var ghpages = require('gulp-gh-pages');
 
 
 function onError(error) {
-	console.log("Error");
+	console.log(error);
 	this.emit('end');
 }
 

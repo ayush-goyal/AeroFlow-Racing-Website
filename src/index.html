@@ -58,16 +58,16 @@
 						<span id="three-lines-nav-span"></span>
 					</button>
 					<li class="main-nav-li animated fadeIn">
-						<a href="#" class="nav-item"><span id="currentPageNav">Home</span></a>
+						<a href="#" class="nav-item" id="main-page-nav-home"><span id="currentPageNav">Home</span></a>
 					</li>
 					<li class="main-nav-li animated fadeIn">
-						<a href="#section-about" class="nav-item">About</a>
+						<a href="#section-about" class="nav-item" id="main-page-nav-about">About</a>
 					</li>
 					<li class="main-nav-li animated fadeIn">
 						<a href="/donate" class="nav-item">Donate</a>
 					</li>
 					<li class="main-nav-li animated fadeIn">
-						<a href="#what-f1" class="nav-item">The Challenge</a>
+						<a href="#what-f1" class="nav-item" id="main-page-nav-challenge">The Challenge</a>
 					</li>
 					<li class="main-nav-li animated fadeIn">
 						<a href="/the-team" class="nav-item">Our Team</a>
@@ -76,7 +76,7 @@
 						<a href="/sponsors" class="nav-item">Sponsors</a>
 					</li>
 					<li class="main-nav-li animated fadeIn">
-						<a href="#gallery" class="nav-item">Gallery</a>
+						<a href="#gallery" class="nav-item" id="main-page-nav-gallery">Gallery</a>
 					</li>
 					<li class="main-nav-li animated fadeIn" id="last-main-nav-li">
 						<a href="/contact" class="nav-item">Contact Us</a>
@@ -257,6 +257,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+	<script>
+		$(document).ready(function() {
+			var scroll_start = 0;
+			var about_offset, challenge_offset, gallery_offset;
+			change_nav();
+			$(document).scroll(function() {
+				change_nav();
+			});
+		});
+	</script>
 </body>
 
 </html>

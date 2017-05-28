@@ -3,16 +3,24 @@
 	header {
 		height: 60px;
 		#logo {
-			height: 40px;
+			height: 54px;
+			margin: 3px 0 3px 3px;
 		}
-		.nav-item {
-			font-size: 0.7em !important;
-			padding: 25px 7px !important;
+		#main-nav-ul {
+			.main-nav-li {
+				.nav-item {
+					font-size: 0.7em !important;
+					padding: 25px 7px;
+				}
+			}
 		}
+	}
+	#section-about-img {
+		margin-top: 100px;
 	}
 }
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 950px) {
 	header {
 		#main-nav-ul {
 			width: 0;
@@ -74,11 +82,141 @@
 	}*/
 }
 
+@media screen and (max-width: 925px) and (min-width: 676px) {
+	#section-about-stats {
+		margin-top: 40px;
+		.stats {
+			.section-about-stats-circle {
+				width: 200px;
+				height: 200px;
+				div {
+					h1 {
+						font-size: 1.7em;
+					}
+					h2 {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px)and (min-width: 501px) {
+	#section-about-team {
+		margin-top: 0 !important;
+		#column-left {
+			width: 90% !important;
+			#section-about-text {
+				margin-top: 20px !important;
+				p {
+					margin-top: 15px !important;
+				}
+			}
+		}
+		#column-right {
+			width: 96% !important;
+			#section-about-img {
+				width: 80% !important;
+				margin: 10px auto 0 !important;
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#section-about-team {
+		margin-top: 0 !important;
+		#column-left {
+			width: 92% !important;
+			margin: 0 4% !important;
+			#section-about-text {
+				margin-top: 10px !important;
+				h1 {
+					font-size: 1.3em !important;
+				}
+				p {
+					margin-top: 10px !important;
+					font-size: 1em !important;
+				}
+			}
+		}
+		#column-right {
+			width: 96% !important;
+			#section-about-img {
+				width: 95% !important;
+				margin: 10px auto 0 !important;
+				display: block;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 675px) {
-	header #logo {
-		height: 40px;
-		margin: 15px 0;
-		margin-left: 10px;
+	.body-title {
+		font-size: 1.3em;
+		span::before, 
+		span::after {  
+			width: 3em;
+		}
+	}
+	#team-pics-main-div {
+		.person-div {
+			.person-name {
+				.person-pic-name {
+					font-size: 1.3em;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 675px) and (min-width: 501px) {
+	#section-about-stats {
+		margin-top: 30px;
+		.stats {
+			.section-about-stats-circle {
+				width: 150px !important;
+				height: 150px !important;
+				div {
+					h1 {
+						font-size: 1.3em !important;
+					}
+					h2 {
+						font-size: 1em !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	#section-about {
+		margin-bottom: 30px;
+		#section-about-stats {
+			margin-top: 20px;
+			.stats {
+				width: 100% !important;
+				margin-bottom: 20px;
+				.section-about-stats-circle {
+					width: 200px !important;
+					height: 200px !important;
+					div {
+						h1 {
+							font-size: 1.6em !important;
+						}
+						h2 {
+							font-size: 1.2em !important;
+						}
+					}
+				}
+			}
+		}
+	}
+	.body-title-paragraph {
+		font-size: 1em !important;
 	}
 }
 
@@ -97,7 +235,7 @@
 			margin-left: 30%;
 			margin-right: 30%;
 		}
-		font-size: 0.7em;
+		font-size: 0.9em;
 	}
 	.body-title {
 		font-size: 1.2em;
@@ -105,10 +243,5 @@
 		span:after {
 			width: 2em;
 		}
-	}
-	header #logo {
-		height: 35px;
-		margin: 17.5px 0;
-		margin-left: 10px;
 	}
 }
