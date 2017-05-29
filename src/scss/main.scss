@@ -68,6 +68,10 @@ header {
 	}
 }
 
+#main-page-wrapper {
+	overflow: auto;
+}
+
 #slideshow {
 	-webkit-transition: height 1s;
 	-moz-transition: height 1s;
@@ -558,4 +562,5 @@ display: inline-block;
 "gallery.scss",
 "sponsors.scss",
 "donate.scss",
-"404.scss";
+"404.scss",
+"privacy-policy.scss";
