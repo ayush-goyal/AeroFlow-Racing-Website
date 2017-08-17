@@ -33,6 +33,18 @@ gulp.task('sass', function() {
 		.pipe(gulp.dest('dist/css/'))
 });
 
+gulp.task('sass-gallery', function() {
+	return gulp.src('src/sass-gallery/main-gallery.scss')
+		.pipe(changed('dist/css/'))
+		.pipe(sourcemaps.init())
+		.pipe(sass())
+		.on('error', onError)
+		.pipe(autoprefixer())
+		.pipe(cleanCSS())
+		.pipe(sourcemaps.write('./maps'))
+		.pipe(gulp.dest('dist/css/'))
+});
+
 gulp.task('js', function() {
 	return gulp.src('src/js/**/*.js')
 		.pipe(changed('dist/js/'))
@@ -77,11 +89,12 @@ gulp.task('fonts', function() {
 
 gulp.task('watch', function() {
 	gulp.watch('src/sass/**/*.scss', ['sass']);
+	gulp.watch('src/sass-gallery/**/*.scss', ['sass-gallery']);
 	gulp.watch('src/img/**', ['img']);
 	gulp.watch('src/js/**', ['js']);
 	gulp.watch('src/*.html', ['html']);
 });
 
-gulp.task('default', ['sass', 'html', 'img', 'js', 'css', 'extras', 'fonts'], function() {
+gulp.task('default', ['sass', 'sass-gallery', 'html', 'img', 'js', 'css', 'extras', 'fonts'], function() {
 	console.log('Building dist folder...');
 });
