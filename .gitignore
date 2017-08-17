@@ -1,11 +1,6 @@
-src/scss/bourbon
-.brackets.json
+src/sass/bourbon
 .jsbeautifyrc
 .stylelintrc
-.vscode/
 dist/css/maps
-dist/css/test
 src/img/other/
-src/img/favicon/other
-sitemap.xml
 node_modules/

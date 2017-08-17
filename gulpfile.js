@@ -8,7 +8,6 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var changed = require('gulp-changed');
 var htmlmin = require('gulp-htmlmin');
-var ghpages = require('gulp-gh-pages');
 
 
 function onError(error) {
@@ -23,7 +22,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('sass', function() {
-	return gulp.src('src/scss/main.scss')
+	return gulp.src('src/sass/main.scss')
 		.pipe(changed('dist/css/'))
 		.pipe(sourcemaps.init())
 		.pipe(sass())
@@ -43,7 +42,7 @@ gulp.task('js', function() {
 })
 
 gulp.task('css', function() {
-	return gulp.src('src/css/*')
+	return gulp.src('src/css/**/*')
 		.pipe(gulp.dest('dist/css/'))
 })
 
@@ -71,13 +70,18 @@ gulp.task('extras', function() {
 		.pipe(gulp.dest('dist/'))
 })
 
+gulp.task('fonts', function() {
+	return gulp.src('src/fonts/**/*')
+		.pipe(gulp.dest('dist/fonts/'))
+})
+
 gulp.task('watch', function() {
-	gulp.watch('src/scss/*.scss', ['sass']);
+	gulp.watch('src/sass/**/*.scss', ['sass']);
 	gulp.watch('src/img/**', ['img']);
 	gulp.watch('src/js/**', ['js']);
 	gulp.watch('src/*.html', ['html']);
 });
 
-gulp.task('default', ['sass', 'html', 'img', 'js', 'css', 'extras'], function() {
+gulp.task('default', ['sass', 'html', 'img', 'js', 'css', 'extras', 'fonts'], function() {
 	console.log('Building dist folder...');
 });
