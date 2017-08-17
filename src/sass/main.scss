@@ -207,3 +207,15 @@
 #footer {
 	margin-bottom: 0;
 }
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #cdcdcd;
+}
