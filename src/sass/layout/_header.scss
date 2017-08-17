@@ -55,9 +55,6 @@
 		p {
 			font-size: 1em;
 			letter-spacing: 0;
-			br {
-				display: none;
-			}
 		}
 		&.alt {
 			@include padding(3em, 2em, (1em, 0, 0, 0));
