@@ -151,7 +151,7 @@
 		@include vendor('transition',
 		('transform 0.75s ease', 'opacity 0.75s ease'));
 		@include vendor('transition-delay',
-		'2.6s');
+		'3.5s');
 		@include vendor('transform',
 		'translateY(0)');
 		border: none;
@@ -189,7 +189,7 @@
 		@include vendor('pointer-events',
 		'none');
 		@include vendor('transition',
-		'opacity 3s ease-in-out');
+		'opacity 4s ease-in-out');
 		content: '';
 		display: block;
 		width: 100%;

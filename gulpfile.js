@@ -69,7 +69,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('img', function() {
-	return gulp.src(['src/img/**/*.+(png|jpg|svg)', '!src/img/**/other/**'])
+	return gulp.src(['src/img/**/*.+(png|jpg|svg|JPG|jpeg)', '!src/img/**/other/**'])
 		.pipe(changed('dist/img/'))
 		.pipe(imagemin({
 			verbose: true
