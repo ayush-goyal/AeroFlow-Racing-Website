@@ -1,7 +1,0 @@
-src/sass/bourbon
-.jsbeautifyrc
-.stylelintrc
-dist/css/maps
-src/img/other/
-node_modules/
-*.JPG
