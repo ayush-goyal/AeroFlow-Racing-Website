@@ -10,6 +10,7 @@ var changed = require('gulp-changed');
 var htmlmin = require('gulp-htmlmin');
 var connect = require('gulp-connect');
 var watch = require('gulp-watch');
+var ngrok = require('ngrok');
 
 
 function onError(error) {
@@ -97,6 +98,9 @@ gulp.task('connect', function() {
 	connect.server({
 		livereload: true,
 		root: 'dist'
+	});
+	ngrok.connect(8080, function(err, url) {
+		console.log(err, url);
 	});
 });
 

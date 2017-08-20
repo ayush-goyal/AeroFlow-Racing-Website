@@ -39,7 +39,11 @@
 			//that all images had to be loaded from below
 			$('#first-img').load(function() {
 				$body.removeClass('loading');
-			})
+			});
+
+			setTimeout(function() {
+				$body.removeClass('loading');
+			}, 3000);
 			/*$window.on('load', function() {
 				window.setTimeout(function() {
 					$body.removeClass('loading');
