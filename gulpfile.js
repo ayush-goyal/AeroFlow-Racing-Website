@@ -8,6 +8,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var changed = require('gulp-changed');
 var htmlmin = require('gulp-htmlmin');
+var connect = require('gulp-connect');
+var watch = require('gulp-watch');
 
 
 function onError(error) {
@@ -30,6 +32,7 @@ gulp.task('sass', function() {
 		.pipe(autoprefixer())
 		.pipe(cleanCSS())
 		.pipe(sourcemaps.write('./maps'))
+		.pipe(connect.reload())
 		.pipe(gulp.dest('dist/css/'))
 });
 
@@ -42,6 +45,7 @@ gulp.task('sass-gallery', function() {
 		.pipe(autoprefixer())
 		.pipe(cleanCSS())
 		.pipe(sourcemaps.write('./maps'))
+		.pipe(connect.reload())
 		.pipe(gulp.dest('dist/css/'))
 });
 
@@ -50,6 +54,7 @@ gulp.task('js', function() {
 		.pipe(changed('dist/js/'))
 		.pipe(uglify())
 		.on('error', onError)
+		.pipe(connect.reload())
 		.pipe(gulp.dest('dist/js/'))
 })
 
@@ -65,6 +70,7 @@ gulp.task('html', function() {
 			collapseWhitespace: true
 		}))
 		.on('error', onError)
+		.pipe(connect.reload())
 		.pipe(gulp.dest('dist/'));
 });
 
@@ -87,12 +93,23 @@ gulp.task('fonts', function() {
 		.pipe(gulp.dest('dist/fonts/'))
 })
 
+gulp.task('connect', function() {
+	connect.server({
+		livereload: true,
+		root: 'dist'
+	});
+});
+
 gulp.task('watch', function() {
 	gulp.watch('src/sass/**/*.scss', ['sass']);
 	gulp.watch('src/sass-gallery/**/*.scss', ['sass-gallery']);
 	gulp.watch('src/img/**', ['img']);
 	gulp.watch('src/js/**', ['js']);
 	gulp.watch('src/*.html', ['html']);
+});
+
+gulp.task('webserver', ['watch', 'connect'], function() {
+	console.log('Starting dev server...');
 });
 
 gulp.task('default', ['sass', 'sass-gallery', 'html', 'img', 'js', 'css', 'extras', 'fonts'], function() {

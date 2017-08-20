@@ -50,5 +50,15 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #000;
+	background-color: #575757;
+}
+
+#main > .thumb > .image-load {
+	@include vendor('animation',
+	'spinner 1s infinite linear !important');
+	background-image: url(images/spinner.svg) !important;
+	top: calc((100% - 40px)/2);
+	width: 40px;
+	height: 40px;
+	left: calc((100% - 40px)/2);
 }
