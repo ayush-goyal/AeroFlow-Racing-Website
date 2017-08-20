@@ -37,7 +37,11 @@
 
 			//Once certain image loads, body loading class is removed from initial setting
 			//that all images had to be loaded from below
-			$('#first-img').load(function() {
+			if ($('#first-img').complete) {
+				$(this.load());
+			};
+
+			$('#first-img').on('load', function() {
 				$body.removeClass('loading');
 			});
 
