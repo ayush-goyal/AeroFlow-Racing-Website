@@ -24,8 +24,8 @@
 	}
 	&.sponsor {
 		img {
-			width: 70% !important;
-			max-width: 300px;
+			width: 80% !important;
+			max-width: 380px;
 			margin: 0 auto 1.5em;
 			border-radius: 0;
 		}
@@ -42,15 +42,25 @@
 	&.other-sponsor {
 		img {
 			width: 50% !important;
-			max-width: 250px;
+			max-width: 220px;
 			margin: 0 auto 1.5em;
 			border-radius: 0;
 		}
 		#keyshot {
-			width: 40% !important;
+			width: 35% !important;
 		}
 		#enoch {
-			width: 60% !important;
+			width: 80% !important;
+			max-width: 330px;
+		}
+		@media screen and (min-width: 736px) {
+			img {
+				width: 60% !important;
+				max-width: 280px;
+			}
+			#keyshot {
+				width: 40% !important;
+			}
 		}
 	}
 	&.left,

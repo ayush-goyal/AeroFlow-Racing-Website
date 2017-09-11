@@ -78,21 +78,26 @@
 	margin: 0 auto 2em;
 }
 
+.sponsor-div {
+	height: 150px;
+}
+
 @media screen and (min-width: 736px) {
 	.team-div {
 		height: 600px;
 	}
+	.sponsor-div {
+		height: 250px;
+	}
 }
 
-@media screen and (min-width: 736px) {
-	.sponsor-div {
-		height: 330px;
-		display: table;
-	}
-	.table-cell {
-		display: table-cell !important;
-		vertical-align: middle;
-	}
+.sponsor-div {
+	display: table;
+}
+
+.table-cell {
+	display: table-cell !important;
+	vertical-align: middle;
 }
 
 
@@ -131,6 +136,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding-top: 0;
+	width: 100%;
 }
 
 @keyframes fadein {
