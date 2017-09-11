@@ -65,6 +65,16 @@
 	margin-top: 1em;
 }
 
+@media screen and (max-width: 980px) {
+	#podcast {
+		text-align: center;
+	}
+}
+
+#podcast a:hover {
+	color: #e2bc36;
+}
+
 @media screen and (min-width: 800px) {
 	#contact-form-div {
 		width: 70%;
