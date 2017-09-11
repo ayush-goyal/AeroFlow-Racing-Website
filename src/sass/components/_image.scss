@@ -22,6 +22,37 @@
 			margin: 0 auto 1.5em;
 		}
 	}
+	&.sponsor {
+		img {
+			width: 70% !important;
+			max-width: 300px;
+			margin: 0 auto 1.5em;
+			border-radius: 0;
+		}
+	}
+	&.first {
+		height: 100px;
+	}
+	&.second {
+		height: 180px;
+	}
+	&.third {
+		height: 150px;
+	}
+	&.other-sponsor {
+		img {
+			width: 50% !important;
+			max-width: 250px;
+			margin: 0 auto 1.5em;
+			border-radius: 0;
+		}
+		#keyshot {
+			width: 40% !important;
+		}
+		#enoch {
+			width: 60% !important;
+		}
+	}
 	&.left,
 	&.right {
 		max-width: 40%;

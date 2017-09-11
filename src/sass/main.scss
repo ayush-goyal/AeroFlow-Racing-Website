@@ -84,6 +84,17 @@
 	}
 }
 
+@media screen and (min-width: 736px) {
+	.sponsor-div {
+		height: 330px;
+		display: table;
+	}
+	.table-cell {
+		display: table-cell !important;
+		vertical-align: middle;
+	}
+}
+
 
 /*#banner:after {
 	-moz-pointer-events: none;
@@ -114,7 +125,7 @@
 /* Banner */
 
 #wrapper {
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/full_team.jpg");
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/splash.jpg");
 	background-attachment: fixed;
 	background-position: center center;
 	background-repeat: no-repeat;
