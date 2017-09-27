@@ -147,6 +147,7 @@
 	background-size: cover;
 	padding-top: 0;
 	width: 100%;
+	transition: all 0.5s ease;
 }
 
 @keyframes fadein {
@@ -251,4 +252,14 @@
 	margin-bottom: 0;
 	color: #e2bc36 !important;
 	font-weight: 400;
+}
+
+.timer-number {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 736px) {
+	#timer-div {
+		margin-bottom: 20px;
+	}
 }

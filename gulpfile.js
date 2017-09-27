@@ -99,9 +99,9 @@ gulp.task('connect', function() {
 		livereload: true,
 		root: 'dist'
 	});
-	ngrok.connect(8080, function(err, url) {
+	/*ngrok.connect(8080, function(err, url) {
 		console.log(err, url);
-	});
+	});*/
 });
 
 gulp.task('watch', function() {

@@ -17,123 +17,167 @@
 
 	$(function() {
 
-		var	$window = $(window),
+		var $window = $(window),
 			$body = $('body'),
 			$main = $('#main');
 
 		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+		$body.addClass('is-loading');
 
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 100);
-			});
+		$window.on('load', function() {
+			window.setTimeout(function() {
+				$body.removeClass('is-loading');
+			}, 100);
+		});
 
 		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+		$('form').placeholder();
 
 		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
+		skel.on('+medium -medium', function() {
+			$.prioritize(
+				'.important\\28 medium\\29',
+				skel.breakpoint('medium').active
+			);
+		});
 
 		// Nav.
-			var $nav = $('#nav');
+		var $nav = $('#nav');
 
-			if ($nav.length > 0) {
+		if ($nav.length > 0) {
 
-				// Shrink effect.
-					$main
-						.scrollex({
-							mode: 'top',
-							enter: function() {
-								$nav.addClass('alt');
-							},
-							leave: function() {
-								$nav.removeClass('alt');
-							},
-						});
+			// Shrink effect.
+			$main
+				.scrollex({
+					mode: 'top',
+					enter: function() {
+						$nav.addClass('alt');
+					},
+					leave: function() {
+						$nav.removeClass('alt');
+					},
+				});
 
-				// Links.
-					var $nav_a = $nav.find('a');
+			// Links.
+			var $nav_a = $nav.find('a');
 
+			$nav_a
+				.scrolly({
+					speed: 1000,
+					offset: function() {
+						return $nav.height();
+					}
+				})
+				.on('click', function() {
+
+					var $this = $(this);
+
+					// External link? Bail.
+					if ($this.attr('href').charAt(0) != '#')
+						return;
+
+					// Deactivate all links.
 					$nav_a
-						.scrolly({
-							speed: 1000,
-							offset: function() { return $nav.height(); }
-						})
-						.on('click', function() {
+						.removeClass('active')
+						.removeClass('active-locked');
 
-							var $this = $(this);
+					// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+					$this
+						.addClass('active')
+						.addClass('active-locked');
 
-							// External link? Bail.
-								if ($this.attr('href').charAt(0) != '#')
-									return;
+				})
+				.each(function() {
 
-							// Deactivate all links.
-								$nav_a
-									.removeClass('active')
-									.removeClass('active-locked');
+					var $this = $(this),
+						id = $this.attr('href'),
+						$section = $(id);
 
-							// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
-								$this
-									.addClass('active')
-									.addClass('active-locked');
+					// No section for this link? Bail.
+					if ($section.length < 1)
+						return;
 
-						})
-						.each(function() {
+					// Scrollex.
+					$section.scrollex({
+						mode: 'middle',
+						initialize: function() {
 
-							var	$this = $(this),
-								id = $this.attr('href'),
-								$section = $(id);
+							// Deactivate section.
+							if (skel.canUse('transition'))
+								$section.addClass('inactive');
 
-							// No section for this link? Bail.
-								if ($section.length < 1)
-									return;
+						},
+						enter: function() {
 
-							// Scrollex.
-								$section.scrollex({
-									mode: 'middle',
-									initialize: function() {
+							// Activate section.
+							$section.removeClass('inactive');
 
-										// Deactivate section.
-											if (skel.canUse('transition'))
-												$section.addClass('inactive');
+							// No locked links? Deactivate all links and activate this section's one.
+							if ($nav_a.filter('.active-locked').length == 0) {
 
-									},
-									enter: function() {
+								$nav_a.removeClass('active');
+								$this.addClass('active');
 
-										// Activate section.
-											$section.removeClass('inactive');
+							}
 
-										// No locked links? Deactivate all links and activate this section's one.
-											if ($nav_a.filter('.active-locked').length == 0) {
+							// Otherwise, if this section's link is the one that's locked, unlock it.
+							else if ($this.hasClass('active-locked'))
+								$this.removeClass('active-locked');
 
-												$nav_a.removeClass('active');
-												$this.addClass('active');
+						}
+					});
 
-											}
+				});
 
-										// Otherwise, if this section's link is the one that's locked, unlock it.
-											else if ($this.hasClass('active-locked'))
-												$this.removeClass('active-locked');
-
-									}
-								});
-
-						});
-
-			}
+		}
 
 		// Scrolly.
-			$('.scrolly').scrolly({
-				speed: 1000
-			});
+		$('.scrolly').scrolly({
+			speed: 1000
+		});
 
 	});
 
 })(jQuery);
+
+function getTimeRemaining(endtime) {
+	var t = Date.parse(endtime) - Date.parse(new Date());
+	var seconds = Math.floor((t / 1000) % 60);
+	var minutes = Math.floor((t / 1000 / 60) % 60);
+	var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+	var days = Math.floor(t / (1000 * 60 * 60 * 24));
+	return {
+		'total': t,
+		'days': days,
+		'hours': hours,
+		'minutes': minutes,
+		'seconds': seconds
+	};
+}
+
+function initializeClock(id, endtime) {
+	var clock = document.getElementById(id);
+	var daysSpan = clock.querySelector('#timer-days');
+	var hoursSpan = clock.querySelector('#timer-hours');
+	var minutesSpan = clock.querySelector('#timer-minutes');
+	var secondsSpan = clock.querySelector('#timer-seconds');
+
+	function updateClock() {
+		var t = getTimeRemaining(endtime);
+
+		daysSpan.innerHTML = t.days;
+		hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+		minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+		secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+		if (t.total <= 0) {
+			clearInterval(timeinterval);
+		}
+	}
+
+	updateClock();
+	var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = 'June 8, 2018';
+initializeClock('timer-div', deadline);
