@@ -4,3 +4,4 @@ src/sass/bourbon
 dist/css/maps
 src/img/other/
 node_modules/
+.DS_Store
