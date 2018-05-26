@@ -43,8 +43,8 @@
 					background-color: _palette(invert, border-bg);
 				}
 				&.active {
-					background-color: _palette(invert, bg);
-					color: #e2bc36;
+					background-color: #0e3d70;
+					color: _palette(invert, bg);
 					box-shadow: none;
 				}
 			}
